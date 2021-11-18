@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit document</title>
+    <style>
+        input{
+            border: 2px solid black;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 42px 43px;
+    padding: 15px 69px;
+
+        }
+    </style>
+</head>
+<body>
+    <form action = "action.php" method = "POST" enctype = "multipart/form-data">
+        <input type = "file" name = "image" />
+        <input type = "submit"/>
+           
+        <ul>
+           <li>Sent file: <?php echo $_FILES['image']['name'];  ?>
+           <li>File size: <?php echo $_FILES['image']['size'];  ?>
+           <li>File type: <?php echo $_FILES['image']['type'] ?>
+        </ul>
+           
+     </form>
+     
+</body>
+</html>
